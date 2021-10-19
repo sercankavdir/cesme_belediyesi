@@ -11,13 +11,15 @@ class _EbelediyeScreenState extends State<EbelediyeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: WebView(
-        initialUrl: 'https://www.cesme.bel.tr/e-belediye',
-        javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (controller) {
-          this.controller = controller;
-        },
+    return SafeArea(
+      child: Scaffold(
+        body: WebView(
+          initialUrl: 'https://www.cesme.bel.tr/e-belediye',
+          javascriptMode: JavascriptMode.unrestricted,
+          onWebViewCreated: (controller) {
+            this.controller = controller;
+          },
+        ),
       ),
     );
   }
